@@ -1,0 +1,10 @@
+<h1>Pdf</h1>
+
+<%= link_to "Download PDF", pdf_response_path(@pdf_response, format: :pdf) %>
+
+<% if @pdf_response.data.present? %>
+<h2>Data</h2>
+<pre>
+<%= JSON.pretty_generate @pdf_response.data if @pdf_response.data.present? %>
+</pre>
+<% end %>

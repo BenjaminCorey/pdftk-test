@@ -1,0 +1,8 @@
+<h1>Pdf Rendering</h1>
+<ul>
+  <% @pdf_responses.each do |pdf| %>
+  <li><%= link_to pdf.id, pdf_response_path(pdf) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "New Pdf", new_pdf_response_path %>
